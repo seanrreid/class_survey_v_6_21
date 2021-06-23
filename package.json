@@ -1,0 +1,17 @@
+{
+    "name": "class_survey_v_6_21",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "db:create": "createdb class_survey_6_21",
+        "db:destroy": "dropdb class_survey_6_21",
+        "db:init": "psql -f ./sql/schema.sql class_survey_6_21",
+        "db:seed": "psql -f ./sql/seed.sql class_survey_6_21",
+        "db:reset": "npm run db:drop; npm run db:init; npm run db:seed;",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
