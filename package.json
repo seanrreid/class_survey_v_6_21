@@ -2,16 +2,24 @@
     "name": "class_survey_v_6_21",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "db:create": "createdb class_survey_6_21",
         "db:destroy": "dropdb class_survey_6_21",
         "db:init": "psql -f ./sql/schema.sql class_survey_6_21",
         "db:seed": "psql -f ./sql/seed.sql class_survey_6_21",
         "db:reset": "npm run db:drop; npm run db:init; npm run db:seed;",
+        "dev": "nodemon app.js",
+        "start": "node app.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "express-es6-template-engine": "^2.2.3",
+        "pg-promise": "^10.10.2"
+    }
 }
