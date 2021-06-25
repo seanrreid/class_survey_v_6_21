@@ -2,7 +2,7 @@
     <h1>${title}</h1>
     <form action="/update" method="POST">
         ${data.map(topic =>
-            `<label style="display: block; width: 100%; margin-bottom: 8px;">
+            `<label>
                 I am
                 <select name="${topic.topic_name}">
                     ${rankings.map(rank =>
