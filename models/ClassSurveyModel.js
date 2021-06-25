@@ -24,9 +24,7 @@ class ClassSurveyModel {
     }
     static async getAllRankings() {
         try {
-            const response = await db.any(
-                `SELECT * FROM rankings;`
-            );
+            const response = await db.any(`SELECT * FROM rankings;`);
             return response;
         } catch (error) {
             console.error('ERROR: ', error);
@@ -37,7 +35,8 @@ class ClassSurveyModel {
     static async updateRanking(topic, rank_id) {
         try {
             const response = await db.result(
-                `UPDATE topics SET topic_score = $1 WHERE topic_name = $2;`, [rank_id, topic]
+                `UPDATE topics SET topic_score = $1 WHERE topic_name = $2;`,
+                [rank_id, topic]
             );
             return response;
         } catch (err) {
